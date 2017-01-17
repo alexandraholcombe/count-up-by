@@ -17,10 +17,11 @@ $(document).ready(function() {
     event.preventDefault();
     countTo = parseInt($("input#count-to").val());
     countBy = parseInt($("input#count-by").val());
+    if (countTo && countBy){
+      countOutput();
+    } else {
+      alert("blah!");
+    };
 
-    console.log(countTo);
-    console.log(countBy);
-
-    countOutput();
   });
 });
