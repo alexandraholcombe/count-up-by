@@ -17,11 +17,18 @@ $(document).ready(function() {
     event.preventDefault();
     countTo = parseInt($("input#count-to").val());
     countBy = parseInt($("input#count-by").val());
-    if (countTo && countBy){
-      countOutput();
-    } else {
-      alert("blah!");
-    };
 
+    console.log(countTo);
+    console.log(countBy);
+
+    if (!(countTo && countBy)){
+      alert("Please input a number!");
+    } else if (countTo <= 0) {
+      alert("The first value may not be negative.")
+    } else if (countBy <= 0) {
+      alert("The second value may not be negative.")
+    } else {
+      countOutput();
+    };
   });
 });
