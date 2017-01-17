@@ -27,6 +27,8 @@ $(document).ready(function() {
       alert("The first value may not be negative.")
     } else if (countBy <= 0) {
       alert("The second value may not be negative.")
+    } else if (countBy>countTo) {
+      alert("The count by number cannot be larger than the count to number")
     } else {
       countOutput();
     };
